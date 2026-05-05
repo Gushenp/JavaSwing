@@ -28,7 +28,7 @@ public class MenuInicial extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jButtonCalculadora = new javax.swing.JButton();
-        jButtonCalculadora1 = new javax.swing.JButton();
+        jButtonCalculadoraTriangulo = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jmenuFormularios = new javax.swing.JMenu();
         jMenuICalculadora = new javax.swing.JMenuItem();
@@ -47,11 +47,11 @@ public class MenuInicial extends javax.swing.JFrame {
             }
         });
 
-        jButtonCalculadora1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/triangleimg.png"))); // NOI18N
-        jButtonCalculadora1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButtonCalculadora1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonCalculadoraTriangulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/triangleimg.png"))); // NOI18N
+        jButtonCalculadoraTriangulo.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButtonCalculadoraTriangulo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonCalculadora1ActionPerformed(evt);
+                jButtonCalculadoraTrianguloActionPerformed(evt);
             }
         });
 
@@ -63,7 +63,7 @@ public class MenuInicial extends javax.swing.JFrame {
                 .addGap(19, 19, 19)
                 .addComponent(jButtonCalculadora)
                 .addGap(18, 18, 18)
-                .addComponent(jButtonCalculadora1)
+                .addComponent(jButtonCalculadoraTriangulo)
                 .addContainerGap(438, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -71,13 +71,14 @@ public class MenuInicial extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButtonCalculadora1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonCalculadoraTriangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonCalculadora, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(244, Short.MAX_VALUE))
         );
 
         jmenuFormularios.setText("Formulários");
 
+        jMenuICalculadora.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/calculadoraimg.png"))); // NOI18N
         jMenuICalculadora.setText("Calculadora");
         jMenuICalculadora.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,6 +87,7 @@ public class MenuInicial extends javax.swing.JFrame {
         });
         jmenuFormularios.add(jMenuICalculadora);
 
+        jMenuITriângulos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/triangleimg.png"))); // NOI18N
         jMenuITriângulos.setText("Triângulos");
         jMenuITriângulos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -129,10 +131,10 @@ public class MenuInicial extends javax.swing.JFrame {
         c.setVisible(true);
     }//GEN-LAST:event_jButtonCalculadoraActionPerformed
 
-    private void jButtonCalculadora1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCalculadora1ActionPerformed
+    private void jButtonCalculadoraTrianguloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCalculadoraTrianguloActionPerformed
         CalcularTriangulos ct = new CalcularTriangulos();
         ct.setVisible(true);
-    }//GEN-LAST:event_jButtonCalculadora1ActionPerformed
+    }//GEN-LAST:event_jButtonCalculadoraTrianguloActionPerformed
 
     private void jMenuITriângulosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuITriângulosActionPerformed
         CalcularTriangulos ct = new CalcularTriangulos();
@@ -176,7 +178,7 @@ public class MenuInicial extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonCalculadora;
-    private javax.swing.JButton jButtonCalculadora1;
+    private javax.swing.JButton jButtonCalculadoraTriangulo;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
