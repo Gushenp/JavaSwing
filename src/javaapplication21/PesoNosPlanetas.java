@@ -29,68 +29,76 @@ public class PesoNosPlanetas extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPresult = new javax.swing.JPanel();
-        lbTextoPrincipal = new javax.swing.JLabel();
-        lbPeso = new javax.swing.JLabel();
-        jPinputs = new javax.swing.JPanel();
         JlbTitle = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         txfInputPeso = new javax.swing.JTextField();
+        bCalcular = new javax.swing.JButton();
+        lbTextoPrincipal = new javax.swing.JLabel();
+        lbPeso = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         cbPlanetas = new javax.swing.JComboBox<>();
-        bCalcular = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Calculo Peso nos Planetas");
-
-        jPresult.setBackground(new java.awt.Color(204, 204, 204));
-
-        lbTextoPrincipal.setForeground(new java.awt.Color(0, 0, 0));
-        lbTextoPrincipal.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbTextoPrincipal.setText("     ");
-        lbTextoPrincipal.setToolTipText("");
-
-        lbPeso.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        lbPeso.setForeground(new java.awt.Color(0, 0, 0));
-        lbPeso.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbPeso.setText("   ");
-
-        javax.swing.GroupLayout jPresultLayout = new javax.swing.GroupLayout(jPresult);
-        jPresult.setLayout(jPresultLayout);
-        jPresultLayout.setHorizontalGroup(
-            jPresultLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPresultLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lbPeso)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPresultLayout.createSequentialGroup()
-                .addContainerGap(27, Short.MAX_VALUE)
-                .addComponent(lbTextoPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(26, Short.MAX_VALUE))
-        );
-        jPresultLayout.setVerticalGroup(
-            jPresultLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPresultLayout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(lbTextoPrincipal)
-                .addGap(18, 18, 18)
-                .addComponent(lbPeso)
-                .addContainerGap(24, Short.MAX_VALUE))
-        );
+        setBackground(new java.awt.Color(51, 51, 51));
+        setMaximumSize(new java.awt.Dimension(590, 392));
+        setMinimumSize(new java.awt.Dimension(590, 392));
+        setResizable(false);
+        getContentPane().setLayout(null);
 
         JlbTitle.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        JlbTitle.setForeground(java.awt.Color.white);
         JlbTitle.setText("CALCULO DE PESOS EM VÁRIOS PLANETAS");
+        getContentPane().add(JlbTitle);
+        JlbTitle.setBounds(40, 20, 488, 32);
 
-        jLabel1.setText("Digite seu peso");
+        jLabel1.setForeground(java.awt.Color.white);
+        jLabel1.setText("Digite seu peso:");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(40, 80, 230, 16);
 
+        txfInputPeso.setForeground(null);
         txfInputPeso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txfInputPesoActionPerformed(evt);
             }
         });
+        getContentPane().add(txfInputPeso);
+        txfInputPeso.setBounds(40, 100, 227, 22);
 
+        bCalcular.setForeground(null);
+        bCalcular.setText("Calcular");
+        bCalcular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bCalcularActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bCalcular);
+        bCalcular.setBounds(220, 150, 130, 50);
+
+        lbTextoPrincipal.setForeground(java.awt.Color.white);
+        lbTextoPrincipal.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbTextoPrincipal.setText("     ");
+        lbTextoPrincipal.setToolTipText("");
+        getContentPane().add(lbTextoPrincipal);
+        lbTextoPrincipal.setBounds(140, 240, 288, 16);
+
+        lbPeso.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        lbPeso.setForeground(java.awt.Color.white);
+        lbPeso.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbPeso.setText("   ");
+        getContentPane().add(lbPeso);
+        lbPeso.setBounds(150, 250, 270, 64);
+
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+
+        jLabel2.setForeground(java.awt.Color.white);
         jLabel2.setText("Escolha o planeta:");
 
+        cbPlanetas.setForeground(null);
         cbPlanetas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mercúrio", "Vênus", "Terra", "Marte", "Júpiter", "Saturno", "Urano", "Netuno", "Lua" }));
         cbPlanetas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,78 +106,48 @@ public class PesoNosPlanetas extends javax.swing.JFrame {
             }
         });
 
-        bCalcular.setText("Calcular");
-        bCalcular.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bCalcularActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPinputsLayout = new javax.swing.GroupLayout(jPinputs);
-        jPinputs.setLayout(jPinputsLayout);
-        jPinputsLayout.setHorizontalGroup(
-            jPinputsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
-            .addGroup(jPinputsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPinputsLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addGroup(jPinputsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPinputsLayout.createSequentialGroup()
-                            .addComponent(bCalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(188, 188, 188))
-                        .addGroup(jPinputsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPinputsLayout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(173, 173, 173)
-                                .addComponent(jLabel2))
-                            .addComponent(JlbTitle))
-                        .addGroup(jPinputsLayout.createSequentialGroup()
-                            .addComponent(txfInputPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(cbPlanetas, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(297, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbPlanetas, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(23, 23, 23))
         );
-        jPinputsLayout.setVerticalGroup(
-            jPinputsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 209, Short.MAX_VALUE)
-            .addGroup(jPinputsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPinputsLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(JlbTitle)
-                    .addGap(29, 29, 29)
-                    .addGroup(jPinputsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel1)
-                        .addComponent(jLabel2))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addGroup(jPinputsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txfInputPeso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(cbPlanetas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(36, 36, 36)
-                    .addComponent(bCalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(jLabel2)
+                .addGap(4, 4, 4)
+                .addComponent(cbPlanetas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(98, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(46, Short.MAX_VALUE)
-                .addComponent(jPinputs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(43, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPresult, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(20, 10, 540, 210);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/planetsbg.png"))); // NOI18N
+        jLabel3.setText("jLabel3");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(0, 0, 590, 370);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPinputs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPresult, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(59, Short.MAX_VALUE))
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
         );
+
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(110, 230, 100, 100);
 
         pack();
         setLocationRelativeTo(null);
@@ -272,6 +250,12 @@ public class PesoNosPlanetas extends javax.swing.JFrame {
     
     private void mostrarResultado(){
         double peso = Double.parseDouble(txfInputPeso.getText());
+        
+        if (peso > 10000000){
+            JOptionPane.showMessageDialog(null, "Uau! Que presado!\nO valor não pode ser superior a 999999.");
+            return;
+        }
+        
         String planetaSelecionado = cbPlanetas.getSelectedItem().toString();
         double gravidadePlaneta = selecionarGravidadePlaneta(planetaSelecionado);
         
@@ -287,8 +271,9 @@ public class PesoNosPlanetas extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cbPlanetas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPinputs;
-    private javax.swing.JPanel jPresult;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel lbPeso;
     private javax.swing.JLabel lbTextoPrincipal;
     private javax.swing.JTextField txfInputPeso;
