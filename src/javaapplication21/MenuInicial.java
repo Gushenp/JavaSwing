@@ -29,10 +29,12 @@ public class MenuInicial extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jButtonCalculadora = new javax.swing.JButton();
         jButtonCalculadoraTriangulo = new javax.swing.JButton();
+        jButtonCalculadoraPesoPlanetas = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jmenuFormularios = new javax.swing.JMenu();
         jMenuICalculadora = new javax.swing.JMenuItem();
         jMenuITriângulos = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
 
@@ -55,6 +57,14 @@ public class MenuInicial extends javax.swing.JFrame {
             }
         });
 
+        jButtonCalculadoraPesoPlanetas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-planeta-50.png"))); // NOI18N
+        jButtonCalculadoraPesoPlanetas.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButtonCalculadoraPesoPlanetas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCalculadoraPesoPlanetasActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -64,13 +74,16 @@ public class MenuInicial extends javax.swing.JFrame {
                 .addComponent(jButtonCalculadora)
                 .addGap(18, 18, 18)
                 .addComponent(jButtonCalculadoraTriangulo)
-                .addContainerGap(438, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButtonCalculadoraPesoPlanetas, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(350, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButtonCalculadoraPesoPlanetas, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonCalculadoraTriangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonCalculadora, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(244, Short.MAX_VALUE))
@@ -95,6 +108,10 @@ public class MenuInicial extends javax.swing.JFrame {
             }
         });
         jmenuFormularios.add(jMenuITriângulos);
+
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-planeta-50.png"))); // NOI18N
+        jMenuItem1.setText("Planetas");
+        jmenuFormularios.add(jMenuItem1);
 
         jMenuBar1.add(jmenuFormularios);
 
@@ -141,6 +158,11 @@ public class MenuInicial extends javax.swing.JFrame {
         ct.setVisible(true);
     }//GEN-LAST:event_jMenuITriângulosActionPerformed
 
+    private void jButtonCalculadoraPesoPlanetasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCalculadoraPesoPlanetasActionPerformed
+       PesoNosPlanetas pn = new PesoNosPlanetas();
+       pn.setVisible(true);
+    }//GEN-LAST:event_jButtonCalculadoraPesoPlanetasActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -178,12 +200,14 @@ public class MenuInicial extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonCalculadora;
+    private javax.swing.JButton jButtonCalculadoraPesoPlanetas;
     private javax.swing.JButton jButtonCalculadoraTriangulo;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuICalculadora;
     private javax.swing.JMenuItem jMenuITriângulos;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JMenu jmenuFormularios;
     // End of variables declaration//GEN-END:variables

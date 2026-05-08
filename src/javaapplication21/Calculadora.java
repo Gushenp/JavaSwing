@@ -51,6 +51,7 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         jLabel1.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Super Calculadora Poderosa");
         jLabel1.setToolTipText("");
@@ -62,8 +63,10 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Número 01:");
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Número 02:");
 
         jButton1.setText("+");

@@ -86,14 +86,14 @@ public class PesoNosPlanetas extends javax.swing.JFrame {
         getContentPane().add(lbTextoPrincipal);
         lbTextoPrincipal.setBounds(140, 240, 288, 16);
 
-        lbPeso.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        lbPeso.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         lbPeso.setForeground(java.awt.Color.white);
         lbPeso.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbPeso.setText("   ");
         getContentPane().add(lbPeso);
         lbPeso.setBounds(150, 250, 270, 64);
 
-        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setBackground(new java.awt.Color(0, 0, 51));
 
         jLabel2.setForeground(java.awt.Color.white);
         jLabel2.setText("Escolha o planeta:");
@@ -130,7 +130,7 @@ public class PesoNosPlanetas extends javax.swing.JFrame {
         getContentPane().add(jPanel1);
         jPanel1.setBounds(20, 10, 540, 210);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/planetsbg.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/planetaimg.png"))); // NOI18N
         jLabel3.setText("jLabel3");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(0, 0, 590, 370);
