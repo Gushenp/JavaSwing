@@ -43,6 +43,8 @@ public class MenuInicial extends javax.swing.JFrame {
         jmenuFormularios = new javax.swing.JMenu();
         jMenuICalculadora = new javax.swing.JMenuItem();
         jMenuITriângulos = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
 
@@ -163,6 +165,7 @@ public class MenuInicial extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel6.setText("Cadastros");
 
+        jButtonCadastros.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/clipboard.png"))); // NOI18N
         jButtonCadastros.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButtonCadastros.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -223,7 +226,7 @@ public class MenuInicial extends javax.swing.JFrame {
 
         jmenuFormularios.setText("Formulários");
 
-        jMenuICalculadora.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/calculadoraimg.png"))); // NOI18N
+        jMenuICalculadora.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/menu/calculator.png"))); // NOI18N
         jMenuICalculadora.setText("Calculadora");
         jMenuICalculadora.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -232,7 +235,7 @@ public class MenuInicial extends javax.swing.JFrame {
         });
         jmenuFormularios.add(jMenuICalculadora);
 
-        jMenuITriângulos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/triangleimg.png"))); // NOI18N
+        jMenuITriângulos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/menu/triangle.png"))); // NOI18N
         jMenuITriângulos.setText("Triângulos");
         jMenuITriângulos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -240,6 +243,24 @@ public class MenuInicial extends javax.swing.JFrame {
             }
         });
         jmenuFormularios.add(jMenuITriângulos);
+
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/menu/planeta.png"))); // NOI18N
+        jMenuItem1.setText("Planetas");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jmenuFormularios.add(jMenuItem1);
+
+        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/menu/cadastro.png"))); // NOI18N
+        jMenuItem2.setText("Cadastros");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jmenuFormularios.add(jMenuItem2);
 
         jMenuBar1.add(jmenuFormularios);
 
@@ -296,6 +317,16 @@ public class MenuInicial extends javax.swing.JFrame {
         cf.setVisible(true);
     }//GEN-LAST:event_jButtonCadastrosActionPerformed
 
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        PesoNosPlanetas pnp = new PesoNosPlanetas();
+        pnp.setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        CadastroFuncionario cf = new CadastroFuncionario();
+        cf.setVisible(true);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -345,6 +376,8 @@ public class MenuInicial extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuICalculadora;
     private javax.swing.JMenuItem jMenuITriângulos;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
