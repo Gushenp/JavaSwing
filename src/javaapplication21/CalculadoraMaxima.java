@@ -17,6 +17,8 @@ public class CalculadoraMaxima extends javax.swing.JFrame {
     }
     
    double resultado;
+   double ultimoD;
+   String ultimoOp;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -154,6 +156,11 @@ public class CalculadoraMaxima extends javax.swing.JFrame {
         jbtimes.setForeground(new java.awt.Color(255, 255, 255));
         jbtimes.setText("*");
         jbtimes.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jbtimes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtimesActionPerformed(evt);
+            }
+        });
 
         jb1.setBackground(new java.awt.Color(51, 51, 51));
         jb1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -193,6 +200,11 @@ public class CalculadoraMaxima extends javax.swing.JFrame {
         jbminus.setForeground(new java.awt.Color(255, 255, 255));
         jbminus.setText("-");
         jbminus.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jbminus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbminusActionPerformed(evt);
+            }
+        });
 
         jb0.setBackground(new java.awt.Color(51, 51, 51));
         jb0.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -358,75 +370,119 @@ public class CalculadoraMaxima extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCalcActionPerformed
-        jbResult.setText(resultado);
+
+        if (ultimoOp.equals("+")){
+            jbsumActionPerformed(evt);
+        }
+        
+        if (ultimoOp.equals("-")){
+            jbminusActionPerformed(evt);
+        }
+        
+        if (ultimoOp.equals("*")){
+            jbtimesActionPerformed(evt);
+        }
+
+        if (ultimoOp.equals("/")){
+            jbminusActionPerformed(evt);
+        }
+        
+        jbResult.setText(String.valueOf(resultado));
+   
     }//GEN-LAST:event_jbCalcActionPerformed
 
     private void jb1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb1ActionPerformed
         String ultimoResultado = jbResult.getText();
         ultimoResultado += jb1.getText();
         jbResult.setText(ultimoResultado);
+        ultimoD = Double.parseDouble(jbResult.getText());
     }//GEN-LAST:event_jb1ActionPerformed
 
     private void jb2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb2ActionPerformed
         String ultimoResultado = jbResult.getText();
         ultimoResultado += jb2.getText();
         jbResult.setText(ultimoResultado);
+        ultimoD = Double.parseDouble(jbResult.getText());
     }//GEN-LAST:event_jb2ActionPerformed
 
     private void jb3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb3ActionPerformed
         String ultimoResultado = jbResult.getText();
         ultimoResultado += jb3.getText();
         jbResult.setText(ultimoResultado);
+        ultimoD = Double.parseDouble(jbResult.getText());
     }//GEN-LAST:event_jb3ActionPerformed
 
     private void jb6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb6ActionPerformed
         String ultimoResultado = jbResult.getText();
         ultimoResultado += jb6.getText();
         jbResult.setText(ultimoResultado);
+        ultimoD = Double.parseDouble(jbResult.getText());
     }//GEN-LAST:event_jb6ActionPerformed
 
     private void jb4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb4ActionPerformed
         String ultimoResultado = jbResult.getText();
         ultimoResultado += jb4.getText();
         jbResult.setText(ultimoResultado);
+        ultimoD = Double.parseDouble(jbResult.getText());
     }//GEN-LAST:event_jb4ActionPerformed
 
     private void jb5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb5ActionPerformed
         String ultimoResultado = jbResult.getText();
         ultimoResultado += jb5.getText();
         jbResult.setText(ultimoResultado);
+        ultimoD = Double.parseDouble(jbResult.getText());
     }//GEN-LAST:event_jb5ActionPerformed
 
     private void jb7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb7ActionPerformed
         String ultimoResultado = jbResult.getText();
         ultimoResultado += jb2.getText();
         jbResult.setText(ultimoResultado);
+        ultimoD = Double.parseDouble(jbResult.getText());
     }//GEN-LAST:event_jb7ActionPerformed
 
     private void jb8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb8ActionPerformed
         String ultimoResultado = jbResult.getText();
         ultimoResultado += jb8.getText();
         jbResult.setText(ultimoResultado);
+        ultimoD = Double.parseDouble(jbResult.getText());
     }//GEN-LAST:event_jb8ActionPerformed
 
     private void jb9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb9ActionPerformed
         String ultimoResultado = jbResult.getText();
         ultimoResultado += jb9.getText();
         jbResult.setText(ultimoResultado);
+        ultimoD = Double.parseDouble(jbResult.getText());
     }//GEN-LAST:event_jb9ActionPerformed
 
     private void jb0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb0ActionPerformed
         String ultimoResultado = jbResult.getText();
         ultimoResultado += jb0.getText();
         jbResult.setText(ultimoResultado);
+        ultimoD = Double.parseDouble(jbResult.getText());
     }//GEN-LAST:event_jb0ActionPerformed
 
     private void jbsumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbsumActionPerformed
-        double num = Double.parseDouble(jbResult.getText());
-        resultado += num;
+
+        resultado += ultimoD;
+        System.out.println(resultado);
         jbResult.setText("");
+        ultimoD = 0;
+        ultimoOp = "+";
     }//GEN-LAST:event_jbsumActionPerformed
 
+    private void jbminusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbminusActionPerformed
+        resultado -= ultimoD;
+        System.out.println(resultado);
+        jbResult.setText("");
+        ultimoD = 0;
+        ultimoOp = "-";
+    }//GEN-LAST:event_jbminusActionPerformed
+
+    private void jbtimesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtimesActionPerformed
+
+    }//GEN-LAST:event_jbtimesActionPerformed
+
+    
     /**
      * @param args the command line arguments
      */
