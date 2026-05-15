@@ -295,12 +295,15 @@ public class PedraPapelTesoura extends javax.swing.JFrame {
         
         if(user.equals("pedra") && bot.equals("tesoura")){
             System.out.println("Usuário ganhou");
-            jLUSER.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgPPT/pedra.gif")));
+            jLUSER.setText("Pedra");
+            jLBOT.setText("Tesoura");       
         } else if (user.equals("papel") && bot.equals("pedra")){
-            jLUSER.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgPPT/papelp.gif")));   
+            jLUSER.setText("Papel");
+            jLBOT.setText("Pedra"); 
             System.out.println("Usuário ganhou");
         } else if (user.equals("tesoura") && bot.equals("pedra")){
-            jLUSER.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgPPT/tesoura.gif")));
+            jLUSER.setText("Tesoura");
+            jLBOT.setText("Pedra"); 
             System.out.println("Usuário ganhou");
         } else if(user.equals(bot)){
             System.out.println("EMPATE");
