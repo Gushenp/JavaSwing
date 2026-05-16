@@ -50,6 +50,7 @@ public class CalculadoraMaxima extends javax.swing.JFrame {
         jbdot = new javax.swing.JButton();
         jbCalc = new javax.swing.JButton();
         jbsum = new javax.swing.JButton();
+        jbClear = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -250,6 +251,17 @@ public class CalculadoraMaxima extends javax.swing.JFrame {
             }
         });
 
+        jbClear.setBackground(new java.awt.Color(51, 51, 51));
+        jbClear.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jbClear.setForeground(new java.awt.Color(255, 255, 255));
+        jbClear.setText("C");
+        jbClear.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jbClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbClearActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jpTecladoLayout = new javax.swing.GroupLayout(jpTeclado);
         jpTeclado.setLayout(jpTecladoLayout);
         jpTecladoLayout.setHorizontalGroup(
@@ -288,7 +300,10 @@ public class CalculadoraMaxima extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jbCalc, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jbsum, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jbsum, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jpTecladoLayout.createSequentialGroup()
+                        .addGap(160, 160, 160)
+                        .addComponent(jbClear, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(15, Short.MAX_VALUE))
         );
         jpTecladoLayout.setVerticalGroup(
@@ -313,11 +328,15 @@ public class CalculadoraMaxima extends javax.swing.JFrame {
                     .addComponent(jb3, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jb2, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jpTecladoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jb0, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbsum, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbCalc, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbdot, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jpTecladoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpTecladoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jb0, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jbsum, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jbdot, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jpTecladoLayout.createSequentialGroup()
+                        .addComponent(jbCalc)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jbClear)))
                 .addGap(14, 14, 14))
         );
 
@@ -488,7 +507,10 @@ public class CalculadoraMaxima extends javax.swing.JFrame {
     }//GEN-LAST:event_jbminusActionPerformed
 
     private void jbtimesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtimesActionPerformed
-
+        if (resultado == 0){
+            resultado = ultimoD;
+        }
+        
         jbResult.setText("");
         ultimoOp = "*";
         
@@ -503,6 +525,13 @@ public class CalculadoraMaxima extends javax.swing.JFrame {
         ultimoOp = "/";
     }//GEN-LAST:event_jbdividerActionPerformed
 
+    private void jbClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbClearActionPerformed
+        resultado = 0;
+        ultimoD = 0;
+        ultimoOp = "";
+        jbResult.setText("");
+    }//GEN-LAST:event_jbClearActionPerformed
+
     private void calcularDivisao(){
         
         resultado /= ultimoD;
@@ -513,10 +542,10 @@ public class CalculadoraMaxima extends javax.swing.JFrame {
     private void calcMultiplicacao(){
         if (resultado == 0){
             resultado = ultimoD;
-            resultado *= ultimoD;
-        } else {
-            resultado *= ultimoD;
         }
+        
+        resultado *= ultimoD;
+   
         
         System.out.println(resultado);
     }
@@ -568,6 +597,7 @@ public class CalculadoraMaxima extends javax.swing.JFrame {
     private javax.swing.JButton jb8;
     private javax.swing.JButton jb9;
     private javax.swing.JButton jbCalc;
+    private javax.swing.JButton jbClear;
     private javax.swing.JLabel jbResult;
     private javax.swing.JButton jbdivider;
     private javax.swing.JButton jbdot;
