@@ -388,6 +388,7 @@ public class CalculadoraMaxima extends javax.swing.JFrame {
         }
         
         jbResult.setText(String.valueOf(resultado));
+        System.out.println(resultado);
    
     }//GEN-LAST:event_jbCalcActionPerformed
 
@@ -463,7 +464,7 @@ public class CalculadoraMaxima extends javax.swing.JFrame {
 
     private void jbsumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbsumActionPerformed
 
-        resultado += ultimoD;
+        resultado += ultimoD;   
         System.out.println(resultado);
         jbResult.setText("");
         ultimoD = 0;
@@ -479,7 +480,15 @@ public class CalculadoraMaxima extends javax.swing.JFrame {
     }//GEN-LAST:event_jbminusActionPerformed
 
     private void jbtimesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtimesActionPerformed
-
+        if (resultado == 0){
+            resultado = ultimoD;
+        } else {
+            resultado *= ultimoD;
+        }
+        
+        System.out.println(resultado);
+        jbResult.setText("");
+        ultimoOp = "*";
     }//GEN-LAST:event_jbtimesActionPerformed
 
     
