@@ -106,6 +106,11 @@ public class CalculadoraMaxima extends javax.swing.JFrame {
         jbdivider.setForeground(new java.awt.Color(255, 255, 255));
         jbdivider.setText("/");
         jbdivider.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jbdivider.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbdividerActionPerformed(evt);
+            }
+        });
 
         jb8.setBackground(new java.awt.Color(51, 51, 51));
         jb8.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -389,7 +394,8 @@ public class CalculadoraMaxima extends javax.swing.JFrame {
         }
 
         if (ultimoOp.equals("/")){
-            jbminusActionPerformed(evt);
+            calcularDivisao();
+            ultimoD = 0;
         }
         
         jbResult.setText(String.valueOf(resultado));
@@ -488,6 +494,22 @@ public class CalculadoraMaxima extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jbtimesActionPerformed
 
+    private void jbdividerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbdividerActionPerformed
+        if (resultado == 0){
+            resultado = ultimoD;
+        }
+        
+        jbResult.setText("");
+        ultimoOp = "/";
+    }//GEN-LAST:event_jbdividerActionPerformed
+
+    private void calcularDivisao(){
+        
+        resultado /= ultimoD;
+        
+        System.out.println(resultado);
+    }
+    
     private void calcMultiplicacao(){
         if (resultado == 0){
             resultado = ultimoD;
