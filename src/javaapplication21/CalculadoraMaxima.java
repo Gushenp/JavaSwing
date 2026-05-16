@@ -372,15 +372,20 @@ public class CalculadoraMaxima extends javax.swing.JFrame {
     private void jbCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCalcActionPerformed
 
         if (ultimoOp.equals("+")){
+            
             jbsumActionPerformed(evt);
+            ultimoD = 0;
         }
         
         if (ultimoOp.equals("-")){
+            
             jbminusActionPerformed(evt);
+            ultimoD = 0;
         }
         
         if (ultimoOp.equals("*")){
-            jbtimesActionPerformed(evt);
+            calcMultiplicacao();
+            ultimoD = 0;
         }
 
         if (ultimoOp.equals("/")){
@@ -388,7 +393,6 @@ public class CalculadoraMaxima extends javax.swing.JFrame {
         }
         
         jbResult.setText(String.valueOf(resultado));
-        System.out.println(resultado);
    
     }//GEN-LAST:event_jbCalcActionPerformed
 
@@ -467,7 +471,6 @@ public class CalculadoraMaxima extends javax.swing.JFrame {
         resultado += ultimoD;   
         System.out.println(resultado);
         jbResult.setText("");
-        ultimoD = 0;
         ultimoOp = "+";
     }//GEN-LAST:event_jbsumActionPerformed
 
@@ -475,22 +478,26 @@ public class CalculadoraMaxima extends javax.swing.JFrame {
         resultado -= ultimoD;
         System.out.println(resultado);
         jbResult.setText("");
-        ultimoD = 0;
         ultimoOp = "-";
     }//GEN-LAST:event_jbminusActionPerformed
 
     private void jbtimesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtimesActionPerformed
+
+        jbResult.setText("");
+        ultimoOp = "*";
+        
+    }//GEN-LAST:event_jbtimesActionPerformed
+
+    private void calcMultiplicacao(){
         if (resultado == 0){
             resultado = ultimoD;
+            resultado *= ultimoD;
         } else {
             resultado *= ultimoD;
         }
         
         System.out.println(resultado);
-        jbResult.setText("");
-        ultimoOp = "*";
-    }//GEN-LAST:event_jbtimesActionPerformed
-
+    }
     
     /**
      * @param args the command line arguments
